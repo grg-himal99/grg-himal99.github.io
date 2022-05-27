@@ -7,12 +7,12 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">JAN 2018 -</div>
-                <div class="caption font-weight-bold green--text">PRESENT</div>
+                <div class="caption font-weight-bold green--text">2012 -</div>
+                <div class="caption font-weight-bold green--text">2017</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Full Stack Web Development Course</strong>
-                <div class="caption mb-2">freeCodeCamp</div>
+                <strong>Bachelor In Computer Engineering</strong>
+                <div class="caption mb-2">National College of ENgineering, Lalitpur Nepal</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -20,12 +20,12 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">SEP 2007 -</div>
-                <div class="caption font-weight-bold green--text">MAY 2014</div>
+                <div class="caption font-weight-bold green--text">2009 -</div>
+                <div class="caption font-weight-bold green--text">2011</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Telecommunications Engineering</strong>
-                <div class="caption mb-2">University of East Sarajevo</div>
+                <strong>High School</strong>
+                <div class="caption mb-2">Siddhasthali English High Secondary School, Sindhuli Nepal</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -33,12 +33,12 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">SEP 2003 -</div>
-                <div class="caption font-weight-bold green--text">MAY 2007</div>
+                <!-- <div class="caption font-weight-bold green--text">SEP 2003 -</div> -->
+                <div class="caption font-weight-bold green--text">Upto 2009</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Electrical Technician for Computers</strong>
-                <div class="caption mb-2">Electro-technical school Doboj</div>
+                <strong>Secondary School Level</strong>
+                <div class="caption mb-2">Gaumati Model Higher Secondary School, Sindhuli Nepal</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -52,12 +52,36 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">DEC 2016 -</div>
+                <div class="caption font-weight-bold green--text">JAN 2020 -</div>
                 <div class="caption font-weight-bold green--text">PRESENT</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Freelance Frontend Developer</strong>
-                <div class="caption mb-2">Remote</div>
+                <strong>Frontend Developer/ Software Engineer</strong>
+                <div class="caption mb-2">Imac Engineering Co. Ltd. (Dispatched to OEC Co. Ltd.)</div>
+              </v-flex>
+            </v-layout>
+          </v-timeline-item>
+          <v-timeline-item color="green" small>
+            <v-layout pt-3>
+              <v-flex xs4>
+                <div class="caption font-weight-bold green--text">JULY 2018 -</div>
+                <div class="caption font-weight-bold green--text">DEC 2019</div>
+              </v-flex>
+              <v-flex class="pl-2">
+                <strong>Software Engineer/ Web Developer</strong>
+                <div class="caption mb-2">Sofwena Pvt. Ltd. </div>
+              </v-flex>
+            </v-layout>
+          </v-timeline-item>
+          <v-timeline-item color="green" small>
+            <v-layout pt-3>
+              <v-flex xs4>
+                <div class="caption font-weight-bold green--text">APR 2017 -</div>
+                <div class="caption font-weight-bold green--text">MAY 2018</div>
+              </v-flex>
+              <v-flex class="pl-2">
+                <strong>Data Interpretator</strong>
+                <div class="caption mb-2">Sprout Technology</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -65,25 +89,12 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">FEB 2018 -</div>
-                <div class="caption font-weight-bold green--text">JULY 2018</div>
+                <div class="caption font-weight-bold green--text">MAY 2016 -</div>
+                <div class="caption font-weight-bold green--text">AUG 2016</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Teacher for electrical technicians</strong>
-                <div class="caption mb-2">High School Doboj Istok</div>
-              </v-flex>
-            </v-layout>
-          </v-timeline-item>
-
-          <v-timeline-item color="green" small>
-            <v-layout pt-3>
-              <v-flex xs4>
-                <div class="caption font-weight-bold green--text">AUG 2014 -</div>
-                <div class="caption font-weight-bold green--text">APR 2016</div>
-              </v-flex>
-              <v-flex class="pl-2">
-                <strong>IT Technician</strong>
-                <div class="caption mb-2">MFS-EMMAUS</div>
+                <strong>Android Developer (Trainee)</strong>
+                <div class="caption mb-2">Nepdroid Academy</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -93,35 +104,46 @@
     <v-layout row justify-center align-center wrap class="mt-4 pt-2">
       <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
         <h2>
-          <span>Design</span>
-
-          <span class="green--text">Skills</span>
-        </h2>
-        <br>
-        <strong>Photoshop</strong>
-        <v-progress-linear v-model="buffer1" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
-        <strong>Adobe XD</strong>
-        <v-progress-linear v-model="buffer2" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
-        <strong>Zeplin</strong>
-        <v-progress-linear v-model="buffer3" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
-      </v-flex>
-      <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
-        <h2>
           <span>Coding</span>
           <span class="green--text">Skills</span>
         </h2>
         <br>
-        <strong>VUE/NUXT</strong>
-        <v-progress-linear v-model="buffer4" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
-        <strong>HTML/CSS</strong>
+        <strong>VUE.JS</strong>
         <v-progress-linear v-model="buffer5" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
-        <strong>JavaScript</strong>
+        <strong>HTML/CSS</strong>
         <v-progress-linear v-model="buffer6" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>JavaScript</strong>
+        <v-progress-linear v-model="buffer7" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>Python</strong>
+        <v-progress-linear v-model="buffer8" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>Android Programming</strong>
+        <v-progress-linear v-model="buffer9" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>React.JS</strong>
+        <v-progress-linear v-model="buffer10" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+      </v-flex>
+      <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
+        <h2>
+          <span>Language</span>
+
+          <span class="green--text">Skills</span>
+        </h2>
+        <br>
+        <strong>English</strong>
+        <v-progress-linear v-model="buffer1" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>Japanese</strong>
+        <v-progress-linear v-model="buffer2" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>Hindi</strong>
+        <v-progress-linear v-model="buffer3" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong>Nepali</strong>
+        <v-progress-linear v-model="buffer4" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong class="hiddenStyle">Hindi</strong>
+        <v-progress-linear class="hiddenStyle" v-model="buffer3" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
+        <strong class="hiddenStyle">Nepali</strong>
+        <v-progress-linear class="hiddenStyle" v-model="buffer4" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
       </v-flex>
       <div class="mt-4 pt-2">
         <v-btn
-          href="https://github.com/"
-          target="_blank"
+          href="Resume.pdf"
           color="green"
           dark
           large
@@ -171,6 +193,10 @@ export default {
       buffer4: 0,
       buffer5: 0,
       buffer6: 0,
+      buffer7: 0,
+      buffer8: 0,
+      buffer9: 0,
+      buffer10: 0,
       bufferValue: 100,
       interval: 0
     };
@@ -187,16 +213,23 @@ export default {
     startBuffer() {
       this.interval = setInterval(() => {
         this.buffer1 = 90;
-        this.buffer2 = 85;
-        this.buffer3 = 80;
-        this.buffer4 = 80;
-        this.buffer5 = 90;
-        this.buffer6 = 70;
+        this.buffer2 = 70;
+        this.buffer3 = 70;
+        this.buffer4 = 99;
+        this.buffer5 = 80;
+        this.buffer6 = 85;
+        this.buffer7 = 80;
+        this.buffer8 = 50;
+        this.buffer9 = 50;
+        this.buffer10 = 40;
       }, 800);
     }
   }
 };
 </script>
 <style >
+.hiddenStyle{
+   visibility: hidden
+}
 </style>
 

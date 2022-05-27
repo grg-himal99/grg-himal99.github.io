@@ -138,9 +138,14 @@ export default {
           href: "https://www.quora.com/profile/Himal-Gurung-5",
           icon: "fab fa-quora"
         },
-        { href: "https://www.instagram.com/8848_himal/", icon: "fab fa-instagram" }
+        { href: "https://www.facebook.com/himalRedDevil", 
+          icon: "fab fa-facebook" 
+        },
+        { href: "https://www.instagram.com/himal_2.0/", 
+          icon: "fab fa-instagram" 
+        }
       ],
-      text1: ["Front-End Developer", "Web Developer", "Web Designer"],
+      text1: ["Front-End Developer","Software Engineer", "Web Developer", "Android Developer", "System Engineer"],
       leftImage: "",
       rightImage: "",
       leftImage2: "",
