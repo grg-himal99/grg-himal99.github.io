@@ -35,10 +35,10 @@ export default {
       { property: "og:site_name", content: "Himal' Space" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://Himal.space" },
-      {
-        property: "og:image",
-        content: "https://i.imgur.com/Dcz2PGx.jpg"
-      },
+      // {
+      //   property: "og:image",
+      //   content: "https://i.imgur.com/Dcz2PGx.jpg"
+      // },
       { property: "og:description", content: "Himal Gurung's Portfolio" }
     ]
   },

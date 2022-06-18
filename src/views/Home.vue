@@ -54,7 +54,7 @@
                   class="green--text font-weight-bold"
                 >VUE</span>, building great user experiences,
                 fighting for simplicity over complexity and constantly learning.
-                When I'm not coding or making videos, you'll find me traveling across Europe.
+                When I'm not coding, you'll find me watching football or thinking about fantasy premier league.
               </p>
             </div>
           </div>
