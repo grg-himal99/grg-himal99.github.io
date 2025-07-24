@@ -66,7 +66,7 @@
             :key="icon.icon"
             fab
             dark
-            outline
+            outlined
             color="green"
             :href="icon.href"
             target="_blank"
@@ -82,7 +82,7 @@
             small
             fab
             dark
-            outline
+            outlined
             color="green"
             :href="icon.href"
             target="_blank"

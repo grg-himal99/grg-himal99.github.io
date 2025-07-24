@@ -1,6 +1,6 @@
 <template>
-  <v-app :dark="goDark">
-    <v-content>
+  <v-app>
+    <v-main>
       <v-container align-center>
         <TheHeader :goDark="goDark" @changeTheme="updateTheme($event)"/>
 
@@ -13,7 +13,7 @@
           <router-view></router-view>
         </transition>
       </v-container>
-    </v-content>
+    </v-main>
     <TheFooter/>
   </v-app>
 </template>
@@ -48,6 +48,11 @@ export default {
   },
   data () {
     return { goDark: false }
+  },
+  watch: {
+    goDark (newVal) {
+      this.$vuetify.theme.dark = newVal
+    }
   },
   methods: {
     updateTheme (updatedTheme) {

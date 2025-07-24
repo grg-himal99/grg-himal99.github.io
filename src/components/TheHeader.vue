@@ -157,7 +157,19 @@ export default {
   background: rgba(255, 255, 255, 0.9) !important;
 }
 
-.theme.--dark .v-app-bar {
+.theme--dark .v-app-bar {
   background: rgba(33, 33, 33, 0.9) !important;
+}
+
+.theme--dark .v-navigation-drawer {
+  background: linear-gradient(135deg, #424242 0%, #303030 100%) !important;
+}
+
+.theme--dark .v-list-item {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.theme--dark .v-list-item__title {
+  color: rgba(255, 255, 255, 0.87) !important;
 }
 </style>
