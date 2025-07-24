@@ -96,66 +96,68 @@
 </template>
 
 <script>
-import { VueTyper } from "vue-typer";
-import VueCompareImage from "vue-compare-image";
+import { VueTyper } from 'vue-typer'
+import VueCompareImage from 'vue-compare-image'
 
 export default {
   metaInfo: {
-    title: "Home",
+    title: 'Home',
     titleTemplate: "%s ← Himal's Space",
     meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "description", content: "Himal Gurung's Portfolio" },
-      { charset: "utf-8" },
-      { property: "og:title", content: "Himal' Space" },
-      { property: "og:site_name", content: "Himal' Space" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://Himal.space" },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'description', content: "Himal Gurung's Portfolio" },
+      { charset: 'utf-8' },
+      { property: 'og:title', content: "Himal' Space" },
+      { property: 'og:site_name', content: "Himal' Space" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://Himal.space' },
       {
-        property: "og:image",
-        content: ""
+        property: 'og:image',
+        content: ''
       },
-      { property: "og:description", content: "Himal Gurung's Portfolio" }
+      { property: 'og:description', content: "Himal Gurung's Portfolio" }
     ]
   },
   components: {
-    "vue-typer": VueTyper,
+    'vue-typer': VueTyper,
     VueCompareImage
   },
-  data() {
+  data () {
     return {
       icons: [
-        { href: "https://github.com/grg-himal99", icon: "fab fa-github" },
+        { href: 'https://github.com/grg-himal99', icon: 'fab fa-github' },
         {
-          href: "https://stackoverflow.com/users/13410588/himal-gurung",
-          icon: "fab fa-stack-overflow"
-        },
-        {
-          href: "https://www.linkedin.com/in/Himal-Gurung",
-          icon: "fab fa-linkedin-in"
+          href: 'https://stackoverflow.com/users/13410588/himal-gurung',
+          icon: 'fab fa-stack-overflow'
         },
         {
-          href: "https://www.quora.com/profile/Himal-Gurung-5",
-          icon: "fab fa-quora"
+          href: 'https://www.linkedin.com/in/Himal-Gurung',
+          icon: 'fab fa-linkedin-in'
         },
-        { href: "https://www.facebook.com/himalRedDevil", 
-          icon: "fab fa-facebook" 
+        {
+          href: 'https://www.quora.com/profile/Himal-Gurung-5',
+          icon: 'fab fa-quora'
         },
-        { href: "https://www.instagram.com/himal_2.0/", 
-          icon: "fab fa-instagram" 
+        {
+          href: 'https://www.facebook.com/himalRedDevil',
+          icon: 'fab fa-facebook'
+        },
+        {
+          href: 'https://www.instagram.com/himal_2.0/',
+          icon: 'fab fa-instagram'
         }
       ],
-      text1: ["Front-End Developer","Software Engineer", "Web Developer", "Android Developer", "System Engineer"],
-      leftImage: "",
-      rightImage: "",
-      leftImage2: "",
-      rightImage2: "",
+      text1: ['Front-End Developer', 'Software Engineer', 'Web Developer', 'Android Developer', 'System Engineer'],
+      leftImage: '',
+      rightImage: '',
+      leftImage2: '',
+      rightImage2: '',
       sliderLine: 0,
       hSize: 0,
       sliderPosition: 0.5
-    };
+    }
   }
-};
+}
 </script>
 <style>
 @keyframes rocking {
@@ -190,4 +192,3 @@ export default {
   background-color: #e91e63;
 }
 </style>
-

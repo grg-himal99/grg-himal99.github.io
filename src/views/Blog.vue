@@ -16,66 +16,66 @@
 </template>
 
 <script>
-import PostPreview from "../components/PostPreview";
-import StoryblokClient from "storyblok-js-client";
-const token = "iyPj3vEKmPladyz3zeqKuwtt";
-let storyapi = new StoryblokClient({
+import PostPreview from '../components/PostPreview'
+import StoryblokClient from 'storyblok-js-client'
+const token = 'iyPj3vEKmPladyz3zeqKuwtt'
+const storyapi = new StoryblokClient({
   accessToken: token
-});
+})
 
 export default {
   metaInfo: {
-    title: "Blog",
+    title: 'Blog',
     titleTemplate: "%s ← Himal's Space",
     meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        name: "description",
+        name: 'description',
         content: "Himal Gurung's Blog"
       },
-      { charset: "utf-8" },
-      { property: "og:title", content: "Himal' Space" },
-      { property: "og:site_name", content: "Himal' Space" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://Himal.space" },
+      { charset: 'utf-8' },
+      { property: 'og:title', content: "Himal' Space" },
+      { property: 'og:site_name', content: "Himal' Space" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://Himal.space' },
       {
-        property: "og:image",
-        content: "https://i.imgur.com/Dcz2PGx.jpg"
+        property: 'og:image',
+        content: 'https://i.imgur.com/Dcz2PGx.jpg'
       },
       {
-        property: "og:description",
+        property: 'og:description',
         content: "Himal Gurung's Blog"
       }
     ]
   },
-  data() {
+  data () {
     return {
       posts: []
-    };
+    }
   },
 
-  created() {
+  created () {
     window.storyblok.init({
       accessToken: token
-    });
-    window.storyblok.on("change", () => {
-      this.getStory("home", "draft");
-    });
+    })
+    window.storyblok.on('change', () => {
+      this.getStory('home', 'draft')
+    })
     window.storyblok.pingEditor(() => {
       if (window.storyblok.isInEditor()) {
-        this.getStory("home", "draft");
+        this.getStory('home', 'draft')
       } else {
-        this.getStory("home", "published");
+        this.getStory('home', 'published')
       }
-    });
+    })
   },
 
   methods: {
-    getStory(version) {
+    getStory (version) {
       storyapi
-        .get("cdn/stories", {
-          version: "draft",
-          starts_with: "blog/"
+        .get('cdn/stories', {
+          version: 'draft',
+          starts_with: 'blog/'
         })
         .then(res => {
           this.posts = res.data.stories.map(bp => {
@@ -84,19 +84,19 @@ export default {
               title: bp.content.title,
               previewText: bp.content.summary,
               thumbnailUrl: bp.content.thumbnail
-            };
-          });
+            }
+          })
         })
         .catch(error => {
-          console.log(error);
-        });
+          console.log(error)
+        })
     }
   },
 
   components: {
     PostPreview
   }
-};
+}
 </script>
 
 <style scoped>

@@ -159,32 +159,32 @@
 <script>
 export default {
   metaInfo: {
-    title: "Resume",
+    title: 'Resume',
     titleTemplate: "%s ← Himal's Space",
     meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        name: "description",
+        name: 'description',
         content:
-          "Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End"
+          'Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End'
       },
-      { charset: "utf-8" },
-      { property: "og:title", content: "Himal' Space" },
-      { property: "og:site_name", content: "Himal' Space" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://Himal.space" },
+      { charset: 'utf-8' },
+      { property: 'og:title', content: "Himal' Space" },
+      { property: 'og:site_name', content: "Himal' Space" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://Himal.space' },
       {
-        property: "og:image",
-        content: "https://i.imgur.com/Dcz2PGx.jpg"
+        property: 'og:image',
+        content: 'https://i.imgur.com/Dcz2PGx.jpg'
       },
       {
-        property: "og:description",
+        property: 'og:description',
         content:
-          "Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End"
+          'Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End'
       }
     ]
   },
-  data() {
+  data () {
     return {
       value: 0,
       buffer1: 0,
@@ -199,37 +199,36 @@ export default {
       buffer10: 0,
       bufferValue: 100,
       interval: 0
-    };
+    }
   },
-  mounted() {
-    this.startBuffer();
+  mounted () {
+    this.startBuffer()
   },
 
-  beforeDestroy() {
-    clearInterval(this.interval);
+  beforeDestroy () {
+    clearInterval(this.interval)
   },
 
   methods: {
-    startBuffer() {
+    startBuffer () {
       this.interval = setInterval(() => {
-        this.buffer1 = 90;
-        this.buffer2 = 70;
-        this.buffer3 = 70;
-        this.buffer4 = 99;
-        this.buffer5 = 80;
-        this.buffer6 = 85;
-        this.buffer7 = 80;
-        this.buffer8 = 50;
-        this.buffer9 = 50;
-        this.buffer10 = 40;
-      }, 800);
+        this.buffer1 = 90
+        this.buffer2 = 70
+        this.buffer3 = 70
+        this.buffer4 = 99
+        this.buffer5 = 80
+        this.buffer6 = 85
+        this.buffer7 = 80
+        this.buffer8 = 50
+        this.buffer9 = 50
+        this.buffer10 = 40
+      }, 800)
     }
   }
-};
+}
 </script>
 <style >
 .hiddenStyle{
    visibility: hidden
 }
 </style>
-

@@ -61,103 +61,103 @@
 <script>
 export default {
   metaInfo: {
-    title: "Services",
+    title: 'Services',
     titleTemplate: "%s ← Himal's Space",
     meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        name: "description",
+        name: 'description',
         content:
           "Himal Gurung's Services Web Development Video Editing Graphic Design Front-End Advetising"
       },
-      { charset: "utf-8" },
-      { property: "og:title", content: "Himal' Space" },
-      { property: "og:site_name", content: "Himal' Space" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://Himal.space" },
+      { charset: 'utf-8' },
+      { property: 'og:title', content: "Himal' Space" },
+      { property: 'og:site_name', content: "Himal' Space" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://Himal.space' },
       {
-        property: "og:image",
-        content: "https://i.imgur.com/Dcz2PGx.jpg"
+        property: 'og:image',
+        content: 'https://i.imgur.com/Dcz2PGx.jpg'
       },
       {
-        property: "og:description",
+        property: 'og:description',
         content:
           "Himal Gurung's Services Web Development Video Editing Graphic Design Front-End Advetising"
       }
     ]
   },
-  data() {
+  data () {
     return {
       clients: [
         {
-          name: "Brandly",
-          src: "https://i.imgur.com/BLJ16wb.png",
-          href: "https://www.brandly.com/"
+          name: 'Brandly',
+          src: 'https://i.imgur.com/BLJ16wb.png',
+          href: 'https://www.brandly.com/'
         },
         {
-          name: "EEVOY",
-          src: "https://i.imgur.com/lIJePVb.png",
-          href: "https://www.eevoy.com/"
+          name: 'EEVOY',
+          src: 'https://i.imgur.com/lIJePVb.png',
+          href: 'https://www.eevoy.com/'
         },
         {
-          name: "Riders Share",
-          src: "https://i.imgur.com/pgkY80b.png",
-          href: "https://www.riders-share.com/"
+          name: 'Riders Share',
+          src: 'https://i.imgur.com/pgkY80b.png',
+          href: 'https://www.riders-share.com/'
         },
         {
-          name: "Esthetician Connection",
+          name: 'Esthetician Connection',
           src:
-            "https://estheticianconnection.com/wp-content/uploads/2019/01/EC-logo.png",
-          href: "https://estheticianconnection.com/"
+            'https://estheticianconnection.com/wp-content/uploads/2019/01/EC-logo.png',
+          href: 'https://estheticianconnection.com/'
         },
         {
-          name: "Goldentimepieces",
-          src: "https://i.imgur.com/sEybxZ5.png",
-          href: "https://goldentimepieces.com/"
+          name: 'Goldentimepieces',
+          src: 'https://i.imgur.com/sEybxZ5.png',
+          href: 'https://goldentimepieces.com/'
         },
         {
-          name: "MFS-EMMAUS",
-          src: "https://i.imgur.com/33xPmQ8.png",
-          href: "https://mfs-emmaus.ba/"
+          name: 'MFS-EMMAUS',
+          src: 'https://i.imgur.com/33xPmQ8.png',
+          href: 'https://mfs-emmaus.ba/'
         },
         {
-          name: "Scanlister",
-          src: "https://i.imgur.com/5K7h7c4.png",
-          href: "https://www.scanlister.com/"
+          name: 'Scanlister',
+          src: 'https://i.imgur.com/5K7h7c4.png',
+          href: 'https://www.scanlister.com/'
         },
         {
-          name: "Unbroken Designs",
-          src: "https://i.imgur.com/kDLRh64.png",
-          href: "https://www.unbrokendesigns.com/"
+          name: 'Unbroken Designs',
+          src: 'https://i.imgur.com/kDLRh64.png',
+          href: 'https://www.unbrokendesigns.com/'
         },
         {
-          name: "VilaShirts",
-          src: "https://i.imgur.com/Fg26T32.png",
-          href: "https://www.instagram.com/_vilashirts_/"
+          name: 'VilaShirts',
+          src: 'https://i.imgur.com/Fg26T32.png',
+          href: 'https://www.instagram.com/_vilashirts_/'
         }
       ],
       services: [
         {
-          src: "https://i.imgur.com/GvTt5GG.png",
-          title: "Web Development"
+          src: 'https://i.imgur.com/GvTt5GG.png',
+          title: 'Web Development'
         },
         {
-          src: "https://i.imgur.com/g74mGuU.png",
-          title: "Web Design"
+          src: 'https://i.imgur.com/g74mGuU.png',
+          title: 'Web Design'
         },
 
         {
-          src: "https://i.imgur.com/wXLtLKy.png",
-          title: "Video Editing"
+          src: 'https://i.imgur.com/wXLtLKy.png',
+          title: 'Video Editing'
         },
         {
-          src: "https://i.imgur.com/tcZnDep.png",
-          title: "Advertising"
+          src: 'https://i.imgur.com/tcZnDep.png',
+          title: 'Advertising'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 <style >
 .v-img--reveal {
