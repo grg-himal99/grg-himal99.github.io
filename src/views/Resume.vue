@@ -53,7 +53,7 @@
             <v-layout pt-3>
               <v-flex xs4>
                 <div class="caption font-weight-bold green--text">JAN 2020 -</div>
-                <div class="caption font-weight-bold green--text">PRESENT</div>
+                <div class="caption font-weight-bold green--text">MAR 2025</div>
               </v-flex>
               <v-flex class="pl-2">
                 <strong>Frontend Developer/ Software Engineer</strong>
