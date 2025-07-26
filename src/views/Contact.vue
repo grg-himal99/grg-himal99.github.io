@@ -5,8 +5,8 @@
         <v-card class="contact-card elevation-8" rounded="lg">
           <v-card-title class="justify-center pb-6">
             <h1 class="display-1 font-weight-light">
-              <span>Get In</span>
-              <span class="green--text font-weight-bold">Touch</span>
+              <span>{{ t('contact.getInTouch', 'Get In Touch').split(' ')[0] }} {{ t('contact.getInTouch', 'Get In Touch').split(' ')[1] }}</span>
+              <span class="green--text font-weight-bold">{{ t('contact.getInTouch', 'Get In Touch').split(' ')[2] }}</span>
             </h1>
           </v-card-title>
           
@@ -18,8 +18,8 @@
                     <v-icon color="white" size="28">fas fa-map-marker-alt</v-icon>
                   </v-avatar>
                   <div class="contact-info">
-                    <div class="subtitle-1 font-weight-bold">Location</div>
-                    <div class="body-1">Tokyo, <span class="green--text">Japan</span></div>
+                    <div class="subtitle-1 font-weight-bold">{{ t('resume.location', 'Tokyo, Japan').split(',')[0] }}</div>
+                    <div class="body-1">{{ t('footer.location', 'Tokyo, Japan') }}</div>
                   </div>
                 </div>
               </v-col>
@@ -30,7 +30,7 @@
                     <v-icon color="white" size="28">fas fa-envelope</v-icon>
                   </v-avatar>
                   <div class="contact-info">
-                    <div class="subtitle-1 font-weight-bold">Email</div>
+                    <div class="subtitle-1 font-weight-bold">{{ t('contact.email', 'Email') }}</div>
                     <div class="body-1">himal.gurung45[at] <span class="green--text">gmail.com</span></div>
                   </div>
                 </div>
@@ -48,6 +48,26 @@
                 </div>
               </v-col>
             </v-row>
+            
+            <v-divider class="my-6"></v-divider>
+            
+            <div class="text-center">
+              <h3 class="subtitle-1 font-weight-bold mb-4">Connect With Me</h3>
+              <div class="social-links">
+                <v-btn
+                  v-for="social in socialLinks"
+                  :key="social.name"
+                  :href="social.url"
+                  target="_blank"
+                  icon
+                  large
+                  class="mx-2 social-btn"
+                  :color="social.color"
+                >
+                  <v-icon>{{ social.icon }}</v-icon>
+                </v-btn>
+              </div>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -56,10 +76,14 @@
 </template>
 
 <script>
+import translationMixin from '../mixins/translationMixin'
+
 export default {
-  metaInfo: {
-    title: 'Contact',
-    titleTemplate: "%s ← Himal's Space",
+  mixins: [translationMixin],
+  metaInfo() {
+    return {
+      title: this.t('contact.title', 'Contact'),
+      titleTemplate: "%s ← Himal's Space",
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
@@ -76,6 +100,18 @@ export default {
         content: "Himal Gurung's Contact Tokyo Japan Get in Touch"
       }
     ]
+    }
+  },
+
+  data() {
+    return {
+      socialLinks: [
+        { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/grg-himal99', color: '#333' },
+        { name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/Himal-Gurung', color: '#0077b5' },
+        { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://www.instagram.com/himal_2.0/', color: '#e4405f' },
+        { name: 'Facebook', icon: 'fab fa-facebook', url: 'https://www.facebook.com/himalRedDevil', color: '#1877f2' }
+      ]
+    }
   }
 }
 </script>
@@ -111,6 +147,15 @@ export default {
 .contact-info {
   text-align: left;
   flex: 1;
+}
+
+.social-btn {
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 600px) {

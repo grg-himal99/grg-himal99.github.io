@@ -23,7 +23,7 @@
 
     <br>
 
-    <vue-typer class="headline" :repeat="0" text="Himal Gurung"></vue-typer>
+    <vue-typer class="headline" :repeat="0" :text="t('home.name', 'Himal Gurung')"></vue-typer>
     <vue-typer
       :text="text1"
       :repeat="Infinity"
@@ -43,8 +43,8 @@
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0">
-              <span>About</span>
-              <span class="green--text">Me</span>
+              <span>{{ t('home.aboutMe', 'About Me').split(' ')[0] || 'About' }}</span>
+              <span class="green--text">{{ t('home.aboutMe', 'About Me').split(' ')[1] || 'Me' }}</span>
             </h3>
             <div>
               <p>
@@ -98,8 +98,10 @@
 <script>
 import { VueTyper } from 'vue-typer'
 import VueCompareImage from 'vue-compare-image'
+import translationMixin from '../mixins/translationMixin'
 
 export default {
+  mixins: [translationMixin],
   metaInfo: {
     title: 'Home',
     titleTemplate: "%s ← Himal's Space",
@@ -121,6 +123,16 @@ export default {
   components: {
     'vue-typer': VueTyper,
     VueCompareImage
+  },
+  computed: {
+    text1() {
+      if (!this.$i18n) {
+        return ['Front-End Developer', 'Software Engineer', 'Web Developer', 'Android Developer', 'System Engineer']
+      }
+      return this.$i18n.locale === 'ja' 
+        ? ['フロントエンド開発者', 'ソフトウェアエンジニア', 'ウェブ開発者', 'アンドロイド開発者', 'システムエンジニア']
+        : ['Front-End Developer', 'Software Engineer', 'Web Developer', 'Android Developer', 'System Engineer']
+    }
   },
   data () {
     return {
@@ -147,7 +159,6 @@ export default {
           icon: 'fab fa-instagram'
         }
       ],
-      text1: ['Front-End Developer', 'Software Engineer', 'Web Developer', 'Android Developer', 'System Engineer'],
       leftImage: '',
       rightImage: '',
       leftImage2: '',

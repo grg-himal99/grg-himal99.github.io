@@ -75,11 +75,33 @@
           {{ item.title }}
         </v-btn>
         
+        <!-- Language Switcher -->
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              icon
+              class="ml-2"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>fas fa-globe</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item @click="changeLanguage('en')">
+              <v-list-item-title>🇺🇸 English</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="changeLanguage('ja')">
+              <v-list-item-title>🇯🇵 日本語</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        
         <!-- Theme Toggle Button -->
         <v-btn 
           @click="changeTheme" 
           icon 
-          class="ml-4 theme-btn"
+          class="ml-2 theme-btn"
           :color="goDark ? 'orange' : 'blue-grey'"
         >
           <v-icon>{{ goDark ? 'fas fa-sun' : 'fas fa-moon' }}</v-icon>
@@ -90,25 +112,46 @@
 </template>
 
 <script>
+import translationMixin from '../mixins/translationMixin'
+
 export default {
+  mixins: [translationMixin],
   props: {
     goDark: {
       type: Boolean
     }
   },
+
+  computed: {
+    navItems() {
+      return [
+        { title: this.t('nav.home', 'Home'), to: '/', icon: 'fas fa-home' },
+        { title: this.t('nav.resume', 'Resume'), to: '/resume', icon: 'fas fa-file-alt' },
+        { title: this.t('nav.contact', 'Contact'), to: '/contact', icon: 'fas fa-envelope' }
+      ]
+    }
+  },
   data () {
     return {
-      drawer: null,
-      navItems: [
-        { title: 'Home', to: '/', icon: 'fas fa-home' },
-        { title: 'Resume', to: '/resume', icon: 'fas fa-file-alt' },
-        { title: 'Contact', to: '/contact', icon: 'fas fa-envelope' }
-      ]
+      drawer: null
     }
   },
   methods: {
     changeTheme () {
       this.$emit('changeTheme', this.goDark)
+    },
+    changeLanguage (locale) {
+      if (this.$i18n) {
+        this.$i18n.locale = locale
+        localStorage.setItem('language', locale)
+      }
+    },
+
+  },
+  mounted () {
+    const savedLanguage = localStorage.getItem('language')
+    if (savedLanguage && this.$i18n) {
+      this.$i18n.locale = savedLanguage
     }
   }
 }
