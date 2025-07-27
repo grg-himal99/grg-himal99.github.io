@@ -9,7 +9,7 @@
     <br>
     <br>
     <v-btn large flat to="/blog" class="green--text">
-      <v-icon>arrow_back</v-icon>Back to Blog
+      <v-icon>arrow_back</v-icon>{{ t('blog.backToBlog', 'Back to Blog') }}
     </v-btn>
   </v-layout>
 </template>
@@ -17,12 +17,14 @@
 <script>
 import marked from 'marked'
 import StoryblokClient from 'storyblok-js-client'
+import translationMixin from '../mixins/translationMixin'
 const token = 'iyPj3vEKmPladyz3zeqKuwtt'
 const storyapi = new StoryblokClient({
   accessToken: token
 })
 
 export default {
+  mixins: [translationMixin],
   data () {
     return {
       posts: [],

@@ -13,6 +13,14 @@ const messages = {
       services: 'Services',
       contact: 'Contact'
     },
+    services: {
+      my: 'My',
+      services: 'Services',
+      clients: 'Clients'
+    },
+    blog: {
+      backToBlog: 'Back to Blog'
+    },
     home: {
       greeting: 'Hello, I am',
       name: 'Himal Gurung',
@@ -23,7 +31,8 @@ const messages = {
       aboutMe: 'About Me',
       mySkills: 'My Skills',
       experience: 'Experience',
-      projects: 'Projects'
+      projects: 'Projects',
+      connectWithMe: 'Connect With Me'
     },
     resume: {
       title: 'Resume',
@@ -81,6 +90,14 @@ const messages = {
       services: 'サービス',
       contact: 'お問い合わせ'
     },
+    services: {
+      my: '私の',
+      services: 'サービス',
+      clients: 'クライアント'
+    },
+    blog: {
+      backToBlog: 'ブログに戻る'
+    },
     home: {
       greeting: 'こんにちは、私は',
       name: 'ヒマル・グルン',
@@ -91,7 +108,8 @@ const messages = {
       aboutMe: '私について',
       mySkills: 'スキル',
       experience: '経験',
-      projects: 'プロジェクト'
+      projects: 'プロジェクト',
+      connectWithMe: '私とつながる'
     },
     resume: {
       title: '履歴書',

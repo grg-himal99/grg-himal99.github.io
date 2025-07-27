@@ -3,8 +3,8 @@
     <v-layout row justify-center align-center wrap class="mt-4 pt-2">
       <v-flex xs12 sm12 md12 lg12 xl12>
         <h2 class="pl-4">
-          <span>My</span>
-          <span class="green--text">Services</span>
+          <span>{{ t('services.my', 'My') }}</span>
+          <span class="green--text">{{ t('services.services', 'Services') }}</span>
         </h2>
       </v-flex>
       <v-flex v-for="service in services" :key="service.src" xs6 sm3 md3 lg3 xl3>
@@ -25,8 +25,8 @@
       </v-flex>
       <v-flex xs12 sm12 md12 lg12 xl12>
         <h2 class="pl-4">
-          <span>My</span>
-          <span class="green--text">Clients</span>
+          <span>{{ t('services.my', 'My') }}</span>
+          <span class="green--text">{{ t('services.clients', 'Clients') }}</span>
         </h2>
       </v-flex>
 
@@ -59,9 +59,13 @@
 </template>
 
 <script>
+import translationMixin from '../mixins/translationMixin'
+
 export default {
-  metaInfo: {
-    title: 'Services',
+  mixins: [translationMixin],
+  metaInfo() {
+    return {
+      title: this.t('nav.services', 'Services'),
     titleTemplate: "%s ← Himal's Space",
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -85,6 +89,7 @@ export default {
           "Himal Gurung's Services Web Development Video Editing Graphic Design Front-End Advetising"
       }
     ]
+    }
   },
   data () {
     return {

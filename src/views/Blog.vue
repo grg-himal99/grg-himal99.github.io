@@ -18,14 +18,17 @@
 <script>
 import PostPreview from '../components/PostPreview'
 import StoryblokClient from 'storyblok-js-client'
+import translationMixin from '../mixins/translationMixin'
 const token = 'iyPj3vEKmPladyz3zeqKuwtt'
 const storyapi = new StoryblokClient({
   accessToken: token
 })
 
 export default {
-  metaInfo: {
-    title: 'Blog',
+  mixins: [translationMixin],
+  metaInfo() {
+    return {
+      title: this.t('nav.blog', 'Blog'),
     titleTemplate: "%s ← Himal's Space",
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -47,6 +50,7 @@ export default {
         content: "Himal Gurung's Blog"
       }
     ]
+    }
   },
   data () {
     return {
