@@ -31,7 +31,7 @@
                   </v-avatar>
                   <div class="contact-info">
                     <div class="subtitle-1 font-weight-bold">{{ t('contact.email', 'Email') }}</div>
-                    <div class="body-1">himal.gurung45[at] <span class="green--text">gmail.com</span></div>
+                    <div class="body-1">himalgurung45[at] <span class="green--text">gmail.com</span></div>
                   </div>
                 </div>
               </v-col>

@@ -1,5 +1,38 @@
 <template>
   <v-layout column justify-center align-center class="mt-4 pt-2">
+    <!-- Code Editor Hero Section -->
+    <div class="code-editor-section mb-8">
+      <div class="code-editor">
+        <div class="editor-header">
+          <div class="editor-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span class="file-name">PortfolioHero.vue</span>
+        </div>
+        <div class="editor-content">
+          <span class="keyword">&lt;template&gt;</span>
+          <br>
+          <span class="indent">&nbsp;&nbsp;</span><span class="tag">&lt;div&gt;</span>
+          <br>
+          <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;h1&gt;</span><span class="text">Hello, I'm Himal</span><span class="emoji">👋</span><span class="tag">&lt;/h1&gt;</span>
+          <br>
+          <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="text">System Engineer</span><span class="tag">&lt;/p&gt;</span>
+          <br>
+          <span class="indent">&nbsp;&nbsp;</span><span class="tag">&lt;/div&gt;</span>
+          <br>
+          <span class="keyword">&lt;/template&gt;</span>
+          <br><br>
+          <span class="keyword">&lt;script&gt;</span>
+          <br>
+          <span class="keyword">export default</span> { <span class="property">name</span>: <span class="string">'PortfolioHero'</span> }
+          <br>
+          <span class="keyword">&lt;/script&gt;</span>
+        </div>
+      </div>
+    </div>
+
     <VueCompareImage
       class="hidden-md-and-down"
       hover
@@ -44,7 +77,7 @@
           <div>
             <h3 class="headline mb-0">
               <span>{{ t('home.aboutMe', 'About Me').split(' ')[0] || 'About' }}</span>
-              <span class="green--text">{{ t('home.aboutMe', 'About Me').split(' ')[1] || 'Me' }}</span>
+              <span class="green--text">{{ t('home.aboutMe', 'More About Me').split(' ')[1] || 'Me' }}</span>
             </h3>
             <div>
               <p>
@@ -195,5 +228,98 @@ export default {
 .vue-typer .custom.caret.selecting {
   display: inline-block;
   background-color: #e91e63;
+}
+
+/* Code Editor Styles */
+.code-editor-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.code-editor {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  background: #2d2d2d;
+  padding: 12px 16px;
+  border-bottom: 1px solid #404040;
+}
+
+.editor-dots {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.file-name {
+  color: #d4d4d4;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.editor-content {
+  padding: 20px;
+  color: #d4d4d4;
+  min-height: 200px;
+}
+
+.keyword {
+  color: #569cd6;
+}
+
+.tag {
+  color: #569cd6;
+}
+
+.property {
+  color: #9cdcfe;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.text {
+  color: #d4d4d4;
+}
+
+.emoji {
+  color: #ffd700;
+}
+
+.indent {
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .code-editor {
+    font-size: 12px;
+  }
+  
+  .editor-content {
+    padding: 16px;
+    min-height: 180px;
+  }
 }
 </style>
