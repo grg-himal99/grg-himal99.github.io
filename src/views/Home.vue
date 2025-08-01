@@ -48,13 +48,7 @@
             </h3>
             <div>
               <p>
-                Hello! I’m Himal Gurung. I'm a front-end developer who
-                is passionate about
-                <span
-                  class="green--text font-weight-bold"
-                >VUE</span>, building great user experiences,
-                fighting for simplicity over complexity and constantly learning.
-                When I'm not coding, you'll find me watching football or thinking about fantasy premier league.
+                {{ t('home.description', 'Hello! I\'m Himal Gurung. I\'m a front-end developer who is passionate about VUE, building great user experiences, fighting for simplicity over complexity and constantly learning. When I\'m not coding, you\'ll find me watching football or thinking about fantasy premier league.') }}
               </p>
             </div>
           </div>
