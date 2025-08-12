@@ -1,14 +1,10 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Meta from 'vue-meta'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
-Vue.use(Meta)
+Vue.use(VueRouter)
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [{
+const routes = [
+  {
     path: '/',
     name: 'home',
     component: () => import('./views/Home.vue')
@@ -16,21 +12,24 @@ export default new Router({
   {
     path: '/contact',
     name: 'contact',
-    component: () =>
-      import(/* webpackChunkName: "about" */ './views/Contact.vue')
+    component: () => import('./views/Contact.vue')
   },
   {
     path: '/resume',
     name: 'resume',
-    component: () =>
-      import(/* webpackChunkName: "about" */ './views/Resume.vue')
+    component: () => import('./views/Resume.vue')
   },
-
   {
     path: '*',
     name: 'Error',
-    component: () =>
-      import(/* webpackChunkName: "about" */ './views/Error.vue')
+    component: () => import('./views/Error.vue')
   }
-  ]
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 })
+
+export default router

@@ -33,44 +33,10 @@
       </div>
     </div>
 
-    <VueCompareImage
-      class="hidden-md-and-down"
-      hover
-      :style="{ minWidth: '1300px' }"
-      :sliderLineWidth="sliderLine"
-      :handleSize="hSize"
-      :leftImage="leftImage"
-      :rightImage="rightImage"
-      :sliderPositionPercentage="sliderPosition"
-    />
-    <VueCompareImage
-      class="hidden-lg-and-up"
-      hover
-      :style="{ maxWidth: '400px' }"
-      :sliderLineWidth="sliderLine"
-      :handleSize="hSize"
-      :leftImage="leftImage2"
-      :rightImage="rightImage2"
-      :sliderPositionPercentage="sliderPosition"
-    />
+    <!-- temporarily removed compare image (Vue 3 alternative needed) -->
 
     <br>
 
-    <vue-typer class="headline" :repeat="0" :text="t('home.name', 'Himal Gurung')"></vue-typer>
-    <vue-typer
-      :text="text1"
-      :repeat="Infinity"
-      :shuffle="false"
-      initial-action="erasing"
-      :pre-type-delay="70"
-      :type-delay="70"
-      :pre-erase-delay="1980"
-      :erase-delay="150"
-      erase-style="select-back"
-      :erase-on-complete="false"
-      caret-animation="smooth"
-    ></vue-typer>
-    <br>
     <v-flex xs12 sm6 md4 lg4 xl4>
       <v-card flat color="transparent" max-width="500">
         <v-card-title primary-title>
@@ -123,7 +89,6 @@
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer'
 import VueCompareImage from 'vue-compare-image'
 import translationMixin from '../mixins/translationMixin'
 
@@ -147,10 +112,7 @@ export default {
       { property: 'og:description', content: "Himal Gurung's Portfolio" }
     ]
   },
-  components: {
-    'vue-typer': VueTyper,
-    VueCompareImage
-  },
+  components: {},
   computed: {
     text1() {
       if (!this.$i18n) {
