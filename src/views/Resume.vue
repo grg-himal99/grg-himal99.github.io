@@ -241,7 +241,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -268,7 +269,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -295,7 +297,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -420,7 +423,8 @@ export default {
         { name: 'JavaScript', icon: 'fab fa-js-square', level: 'Expert', percentage: 85 },
         { name: 'Vue.js', icon: 'fab fa-vuejs', level: 'Expert', percentage: 85 },
         { name: 'Nuxt.js', icon: 'fas fa-layer-group', level: 'Expert', percentage: 90 },
-        { name: 'Angular.js', icon: 'fab fa-angular', level: 'Advanced', percentage: 75 }
+        { name: 'Angular.js', icon: 'fab fa-angular', level: 'Advanced', percentage: 75 },
+        { name: 'Express.js', img: '/images/express-kawaii.webp', level: 'Intermediate', percentage: 60 }
       ],
       mobileTestingSkills: [
         { name: 'Android Programming', icon: 'fab fa-android', level: 'Intermediate', percentage: 55 },
@@ -431,7 +435,8 @@ export default {
         { name: 'ChatGPT', icon: 'fas fa-comments', level: 'Expert', percentage: 90 },
         { name: 'GitHub Copilot', icon: 'fab fa-github', level: 'Expert', percentage: 85 },
         { name: 'Amazon Q', icon: 'fab fa-aws', level: 'Advanced', percentage: 80 },
-        { name: 'AWS', icon: 'fab fa-aws', level: 'Advanced', percentage: 75 }
+        { name: 'AWS', icon: 'fab fa-aws', level: 'Advanced', percentage: 75 },
+        { name: 'Project Management', icon: 'fas fa-tasks', level: 'Advanced', percentage: 75 }
       ],
       languageSkills: [
         { name: 'English', flag: '🇺🇸', level: 'Fluent', percentage: 90 },
@@ -784,6 +789,13 @@ export default {
 
 .skill-icon .v-icon {
   font-size: 14px !important;
+}
+
+.skill-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .language-flag .flag-emoji {
