@@ -18,7 +18,7 @@
           <br>
           <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;h1&gt;</span><span class="text">Hello, I'm Himal</span><span class="emoji">👋</span><span class="tag">&lt;/h1&gt;</span>
           <br>
-          <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="text">System Engineer</span><span class="tag">&lt;/p&gt;</span>
+          <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="text">Frontend Engineer</span><span class="tag">&lt;/p&gt;</span>
           <br>
           <span class="indent">&nbsp;&nbsp;</span><span class="tag">&lt;/div&gt;</span>
           <br>
