@@ -48,8 +48,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['vue', 'vue-router'],
-          vuetify: ['vuetify'],
-          utils: ['marked', 'vue-analytics', 'storyblok-js-client']
+          vuetify: ['vuetify']
         }
       }
     },
