@@ -3,7 +3,8 @@ export default {
     t() {
       return (key, fallback = '') => {
         try {
-          return (this.$t && this.$t(key)) || fallback
+          if (this.$te && this.$te(key)) return this.$t(key)
+          return fallback
         } catch (error) {
           console.warn('Translation error:', error)
           return fallback

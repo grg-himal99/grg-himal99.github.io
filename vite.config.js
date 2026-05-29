@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue2'
+import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
@@ -48,8 +48,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['vue', 'vue-router'],
-          vuetify: ['vuetify'],
-          utils: ['marked', 'vue-analytics', 'storyblok-js-client']
+          vuetify: ['vuetify']
         }
       }
     },

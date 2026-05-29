@@ -1,27 +1,11 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import i18n from './plugins/i18n'
-import App from './App.vue'
 import router from './router'
-import StoryblokVue from 'storyblok-vue'
-import VueAnalytics from 'vue-analytics'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-Vue.config.productionTip = false
-const isProd = process.env.NODE_ENV === 'production'
+AOS.init({ once: true, duration: 600 })
 
-Vue.use(StoryblokVue)
-Vue.use(VueAnalytics, {
-  id: 'UA-139190314-1',
-  router,
-  debug: {
-    enabled: !isProd,
-    sendHitTask: isProd
-  }
-})
-
-new Vue({
-  router,
-  vuetify,
-  i18n,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App).use(vuetify).use(i18n).use(router).mount('#app')

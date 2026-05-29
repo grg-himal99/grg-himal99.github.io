@@ -150,7 +150,7 @@ export default {
   justify-content: flex-end;
 }
 
-.theme--dark .custom-footer {
+.v-theme--dark .custom-footer {
   background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%) !important;
 }
 

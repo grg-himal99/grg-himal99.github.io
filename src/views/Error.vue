@@ -1,5 +1,5 @@
 <template>
-  <v-layout row justify-center align-center wrap class="mt-4 pt-2">
+  <v-container class="d-flex justify-center align-center flex-wrap mt-4 pt-2">
     <div class="circles">
       <p>
         404
@@ -11,11 +11,11 @@
       <span class="circle small"></span>
       <br>
       <br>
-      <v-btn large to="/" class="green--text">
-        <v-icon>arrow_back</v-icon>GO HOME
+      <v-btn size="large" to="/" class="text-green">
+        <v-icon start>fas fa-arrow-left</v-icon>GO HOME
       </v-btn>
     </div>
-  </v-layout>
+  </v-container>
 </template>
 
 <script>
