@@ -20,10 +20,6 @@
             <v-icon size="12" class="mr-1" color="#4CAF50">fas fa-map-marker-alt</v-icon>
             {{ t('footer.location', 'Tokyo, Japan') }}
           </div>
-          <div class="brand-status">
-            <span class="status-dot"></span>
-            Available for opportunities
-          </div>
         </div>
 
         <!-- Navigate -->

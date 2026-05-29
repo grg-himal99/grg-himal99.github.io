@@ -223,8 +223,8 @@
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-code</v-icon>
             <h2 class="text-h5 font-weight-bold">
-              <span>{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[0] || 'Technical' }}</span>
-              <span class="text-green">{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[1] || 'Skills' }}</span>
+              <span>Technical </span>
+              <span class="text-green">Skills</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
@@ -321,8 +321,8 @@
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-language</v-icon>
             <h2 class="text-h5 font-weight-bold">
-              <span>{{ t('resume.languageSkills', 'Language Skills').split(' ')[0] || 'Language' }}</span>
-              <span class="text-green">{{ t('resume.languageCertifications', 'Certifications') }}</span>
+              <span>Language & </span>
+              <span class="text-green">Certifications</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
