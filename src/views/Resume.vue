@@ -150,11 +150,11 @@
                   <div class="rt-title">Frontend Developer / Software Engineer</div>
                   <div class="rt-org">
                     <v-icon size="11" class="mr-1">fas fa-building</v-icon>
-                    Imac Engineering Co. Ltd.
+                    OEC Co. Ltd.
                   </div>
                   <div class="rt-location">
                     <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
-                    Oita, Japan · Dispatched to OEC Co. Ltd.
+                    Oita, Japan · via Imac Engineering Co. Ltd.
                   </div>
                 </div>
               </div>

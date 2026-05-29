@@ -4,8 +4,8 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 
-export default defineConfig({
-  base: '/himal.github.io/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/himal.github.io/' : '/',
   plugins: [
     vue(),
     visualizer({
@@ -61,4 +61,4 @@ export default defineConfig({
   define: {
     'process.env': {}
   }
-})
+}))
