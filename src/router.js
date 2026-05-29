@@ -1,35 +1,13 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: () => import('./views/Home.vue')
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => import('./views/Contact.vue')
-  },
-  {
-    path: '/resume',
-    name: 'resume',
-    component: () => import('./views/Resume.vue')
-  },
-  {
-    path: '*',
-    name: 'Error',
-    component: () => import('./views/Error.vue')
-  }
+  { path: '/', name: 'home', component: () => import('./views/Home.vue') },
+  { path: '/contact', name: 'contact', component: () => import('./views/Contact.vue') },
+  { path: '/resume', name: 'resume', component: () => import('./views/Resume.vue') },
+  { path: '/:pathMatch(.*)*', name: 'Error', component: () => import('./views/Error.vue') }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+export default createRouter({
+  history: createWebHistory(),
   routes
 })
-
-export default router

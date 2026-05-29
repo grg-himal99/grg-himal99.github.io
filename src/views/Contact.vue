@@ -80,29 +80,6 @@ import translationMixin from '../mixins/translationMixin'
 
 export default {
   mixins: [translationMixin],
-  metaInfo() {
-    return {
-      title: this.t('contact.title', 'Contact'),
-      titleTemplate: "%s ← Himal's Space",
-    meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'description',
-        content: "Himal Gurung's Contact Tokyo Japan Get in Touch"
-      },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: "Himal' Space" },
-      { property: 'og:site_name', content: "Himal' Space" },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://Himal.space' },
-      {
-        property: 'og:description',
-        content: "Himal Gurung's Contact Tokyo Japan Get in Touch"
-      }
-    ]
-    }
-  },
-
   data() {
     return {
       socialLinks: [
@@ -131,7 +108,7 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.theme--dark .contact-card {
+.v-theme--dark .contact-card {
   background: rgba(66, 66, 66, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }

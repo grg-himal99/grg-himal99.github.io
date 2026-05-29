@@ -1,5 +1,5 @@
 <template>
-  <v-layout column justify-center align-center class="mt-4 pt-2">
+  <div class="d-flex flex-column align-center mt-4 pt-2">
     <!-- Code Editor Hero Section -->
     <div class="code-editor-section mb-8">
       <div class="code-editor">
@@ -37,13 +37,13 @@
 
     <br>
 
-    <v-flex xs12 sm6 md4 lg4 xl4>
+    <div>
       <v-card flat color="transparent" max-width="500">
         <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">
+            <h3 class="text-h5 mb-0">
               <span>{{ t('home.aboutMe', 'About Me').split(' ')[0] || 'About' }}</span>
-              <span class="green--text">{{ t('home.aboutMe', 'More About Me').split(' ')[1] || 'Me' }}</span>
+              <span class="text-green">{{ t('home.aboutMe', 'More About Me').split(' ')[1] || 'Me' }}</span>
             </h3>
             <div>
               <p>
@@ -53,49 +53,47 @@
           </div>
         </v-card-title>
 
-        <v-card-actions class="hidden-sm-and-down">
+        <v-card-actions class="d-none d-md-flex">
           <v-btn
             v-for="icon in icons"
             :key="icon.icon"
-            fab
-            dark
-            outlined
+            icon
+            variant="outlined"
             color="green"
             :href="icon.href"
             target="_blank"
           >
-            <v-icon dark>{{icon.icon}}</v-icon>
+            <v-icon>{{icon.icon}}</v-icon>
           </v-btn>
         </v-card-actions>
 
-        <v-card-actions class="hidden-md-and-up justify-center">
+        <v-card-actions class="d-flex d-md-none justify-center">
           <v-btn
             v-for="icon in icons"
             :key="icon.icon"
-            small
-            fab
-            dark
-            outlined
+            size="small"
+            icon
+            variant="outlined"
             color="green"
             :href="icon.href"
             target="_blank"
           >
-            <v-icon dark>{{icon.icon}}</v-icon>
+            <v-icon>{{icon.icon}}</v-icon>
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-flex>
+    </div>
 
     <!-- My Journey Section -->
-    <v-flex xs12 class="mt-8 mb-8">
+    <div class="mt-8 mb-8" style="width:100%">
       <v-card flat color="transparent" max-width="900" class="mx-auto">
         <v-card-title class="text-center">
           <div class="journey-header">
-            <v-icon large color="green" class="mr-3">mdi-map-marker-path</v-icon>
-            <h2 class="headline">
-              <span class="green--text">{{ t('home.journey', 'My Journey') }}</span>
+            <v-icon large color="green" class="mr-3">fas fa-route</v-icon>
+            <h2 class="text-h5">
+              <span class="text-green">{{ t('home.journey', 'My Journey') }}</span>
             </h2>
-            <v-icon large color="green" class="ml-3">mdi-rocket-launch</v-icon>
+            <v-icon large color="green" class="ml-3">fas fa-rocket</v-icon>
           </div>
           <p class="journey-subtitle">{{ t('home.journeySubtitle', 'From a small village to the world stage') }}</p>
         </v-card-title>
@@ -106,19 +104,19 @@
             <div class="journey-item" data-aos="fade-right" data-aos-delay="100">
               <div class="journey-icon village">
                 <div class="icon-background">
-                  <v-icon large color="green">mdi-home-village</v-icon>
+                  <v-icon large color="green">fas fa-home</v-icon>
                 </div>
                 <div class="pulse-ring"></div>
               </div>
               <div class="journey-content">
                 <div class="location-badge village-badge">
-                  <v-icon small color="white">mdi-map-marker</v-icon>
+                  <v-icon small color="white">fas fa-map-marker-alt</v-icon>
                   <span>Village</span>
                 </div>
                 <h3 class="journey-title">Golanjor 4 Ranikhola Village</h3>
                 <p class="journey-years">2007 & Earlier</p>
                 <p class="journey-description">
-                  {{ t('home.villageStory', 'Where my story began - growing up in a small village in Sindhuli, dreaming of bigger possibilities. The foundation of my values and determination was built here.') }}
+                  {{ t('home.villageStory', 'Where my story began - growing up in a small village in Sindhuli, dreaming of bigger possibilities. At just 12 years old, I left home to chase a dream that felt impossible at the time. The foundation of my values and determination was built here.') }}
                 </p>
                 <div class="achievement-tags">
                   <span class="tag">Roots</span>
@@ -132,13 +130,13 @@
             <div class="journey-item" data-aos="fade-left" data-aos-delay="200">
               <div class="journey-icon town">
                 <div class="icon-background">
-                  <v-icon large color="blue">mdi-city</v-icon>
+                  <v-icon large color="blue">fas fa-building</v-icon>
                 </div>
                 <div class="pulse-ring"></div>
               </div>
               <div class="journey-content">
                 <div class="location-badge town-badge">
-                  <v-icon small color="white">mdi-city</v-icon>
+                  <v-icon small color="white">fas fa-building</v-icon>
                   <span>Town</span>
                 </div>
                 <h3 class="journey-title">Sindhuli Madhi</h3>
@@ -158,13 +156,13 @@
             <div class="journey-item" data-aos="fade-right" data-aos-delay="300">
               <div class="journey-icon city">
                 <div class="icon-background">
-                  <v-icon large color="orange">mdi-city-variant</v-icon>
+                  <v-icon large color="orange">fas fa-landmark</v-icon>
                 </div>
                 <div class="pulse-ring"></div>
               </div>
               <div class="journey-content">
                 <div class="location-badge city-badge">
-                  <v-icon small color="white">mdi-city-variant</v-icon>
+                  <v-icon small color="white">fas fa-landmark</v-icon>
                   <span>Capital</span>
                 </div>
                 <h3 class="journey-title">Kathmandu</h3>
@@ -184,13 +182,13 @@
             <div class="journey-item" data-aos="fade-left" data-aos-delay="400">
               <div class="journey-icon japan">
                 <div class="icon-background">
-                  <v-icon large color="red">mdi-flag</v-icon>
+                  <v-icon large color="red">fas fa-flag</v-icon>
                 </div>
                 <div class="pulse-ring"></div>
               </div>
               <div class="journey-content">
                 <div class="location-badge japan-badge">
-                  <v-icon small color="white">mdi-flag</v-icon>
+                  <v-icon small color="white">fas fa-flag</v-icon>
                   <span>International</span>
                 </div>
                 <h3 class="journey-title">Oita, Japan</h3>
@@ -210,7 +208,7 @@
             <div class="journey-item current" data-aos="fade-right" data-aos-delay="500">
               <div class="journey-icon tokyo">
                 <div class="icon-background">
-                  <v-icon large color="purple">mdi-tower-lightning</v-icon>
+                  <v-icon large color="purple">fas fa-broadcast-tower</v-icon>
                 </div>
                 <div class="pulse-ring"></div>
                 <div class="sparkle sparkle-1"></div>
@@ -219,7 +217,7 @@
               </div>
               <div class="journey-content">
                 <div class="location-badge tokyo-badge">
-                  <v-icon small color="white">mdi-tower-lightning</v-icon>
+                  <v-icon small color="white">fas fa-broadcast-tower</v-icon>
                   <span>Dream City</span>
                 </div>
                 <h3 class="journey-title">Tokyo</h3>
@@ -233,7 +231,7 @@
                   <span class="tag">Success</span>
                 </div>
                 <div class="current-indicator">
-                  <v-icon small color="purple">mdi-star</v-icon>
+                  <v-icon small color="purple">fas fa-star</v-icon>
                   <span>Current Chapter</span>
                 </div>
               </div>
@@ -241,8 +239,8 @@
           </div>
         </v-card-text>
       </v-card>
-    </v-flex>
-  </v-layout>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -250,25 +248,7 @@ import translationMixin from '../mixins/translationMixin'
 
 export default {
   mixins: [translationMixin],
-  metaInfo: {
-    title: 'Home',
-    titleTemplate: "%s ← Himal's Space",
-    meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Himal Gurung's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: "Himal' Space" },
-      { property: 'og:site_name', content: "Himal' Space" },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://Himal.space' },
-      {
-        property: 'og:image',
-        content: ''
-      },
-      { property: 'og:description', content: "Himal Gurung's Portfolio" }
-    ]
-  },
-  data () {
+data () {
     return {
       icons: [
         { href: 'https://github.com/grg-himal99', icon: 'fab fa-github' },
@@ -391,7 +371,7 @@ export default {
   position: absolute;
   left: 30px;
   top: 0;
-  bottom: 0;
+  bottom: 50px;
   width: 2px;
   background: linear-gradient(180deg, #4CAF50 0%, #2196F3 25%, #FF9800 50%, #F44336 75%, #9C27B0 100%);
 }
@@ -432,11 +412,12 @@ export default {
 .journey-content {
   flex: 1;
   background: rgba(30, 30, 30, 0.8);
-  padding: 20px;
+  padding: 16px 20px 12px;
   border-radius: 12px;
   border-left: 4px solid #4CAF50;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  align-self: flex-start;
 }
 
 .journey-content:hover {
@@ -472,6 +453,148 @@ export default {
 
 .journey-item.current .journey-title {
   color: #9C27B0;
+}
+
+.journey-item.current .journey-description {
+  color: #444;
+}
+
+.journey-item.current .journey-years {
+  color: #666;
+}
+
+.journey-item.current .achievement-tags .tag {
+  background: rgba(156, 39, 176, 0.1);
+  border-color: rgba(156, 39, 176, 0.3);
+  color: #555;
+}
+
+/* Dark mode overrides for current item */
+.v-theme--dark .journey-item.current .journey-content {
+  background: rgba(156, 39, 176, 0.15);
+}
+
+.v-theme--dark .journey-item.current .journey-description {
+  color: #ccc;
+}
+
+.v-theme--dark .journey-item.current .journey-years {
+  color: #aaa;
+}
+
+.v-theme--dark .journey-item.current .achievement-tags .tag {
+  background: rgba(156, 39, 176, 0.2);
+  border-color: rgba(156, 39, 176, 0.4);
+  color: #bbb;
+}
+
+/* Journey icon inner background */
+.icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pulsing ring on journey icons */
+.pulse-ring {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0;
+  animation: pulseRing 2s ease-out infinite;
+}
+
+.journey-icon.village .pulse-ring  { color: #4CAF50; }
+.journey-icon.town    .pulse-ring  { color: #2196F3; }
+.journey-icon.city    .pulse-ring  { color: #FF9800; }
+.journey-icon.japan   .pulse-ring  { color: #F44336; }
+.journey-icon.tokyo   .pulse-ring  { color: #9C27B0; }
+
+@keyframes pulseRing {
+  0%   { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.4); opacity: 0;   }
+}
+
+/* Location badge pill */
+.location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.village-badge { background: #4CAF50; }
+.town-badge    { background: #2196F3; }
+.city-badge    { background: #FF9800; }
+.japan-badge   { background: #F44336; }
+.tokyo-badge   { background: #9C27B0; }
+
+/* Achievement tag pills */
+.achievement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.achievement-tags .tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #d4d4d4;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+}
+
+/* Current chapter indicator */
+.current-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  background: rgba(156, 39, 176, 0.2);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9C27B0;
+  letter-spacing: 0.5px;
+}
+
+/* Tokyo sparkles */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9C27B0;
+  opacity: 0;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle-1 { top: -4px;  right: 4px;  animation-delay: 0s; }
+.sparkle-2 { top: 4px;   right: -4px; animation-delay: 0.6s; }
+.sparkle-3 { top: -2px;  left: -4px;  animation-delay: 1.2s; }
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50%       { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 768px) {

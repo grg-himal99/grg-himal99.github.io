@@ -8,33 +8,33 @@
             <v-row align="center">
               <v-col cols="12" md="3" class="text-center">
                 <v-avatar size="120" class="profile-avatar">
-                  <v-icon size="60" color="green">fas fa-user</v-icon>
+                  <v-icon size="60" color="white">fas fa-user</v-icon>
                 </v-avatar>
               </v-col>
               <v-col cols="12" md="9">
                 <div class="profile-content">
-                  <h1 class="display-1 font-weight-bold mb-2">
+                  <h1 class="text-h3 font-weight-bold mb-2">
                     <span>Himal</span>
-                    <span class="green--text">Gurung</span>
+                    <span class="profile-name-accent">Gurung</span>
                   </h1>
-                  <h3 class="title green--text mb-4">Frontend Developer & Software Engineer</h3>
-                  <p class="body-1 mb-4 profile-description">
-                    Passionate frontend developer with 5+ years of experience in Vue.js, JavaScript, and modern web technologies. 
-                    Currently based in Tokyo, Japan, specializing in creating intuitive user experiences and scalable web applications. 
+                  <h3 class="profile-subtitle mb-4">Frontend Developer & Software Engineer</h3>
+                  <p class="text-body-1 mb-4 profile-description">
+                    Passionate frontend developer with 9+ years of experience in Vue.js, JavaScript, and modern web technologies.
+                    Currently based in Tokyo, Japan, specializing in creating intuitive user experiences and scalable web applications.
                     Strong background in both frontend and backend development with expertise in multiple programming languages.
                   </p>
                   <div class="profile-stats">
-                    <v-chip class="ma-1" color="green" text-color="white" small>
-                      <v-icon left small>fas fa-calendar</v-icon>
-                      8+ Years Of Experience
+                    <v-chip class="ma-1 profile-chip" size="small">
+                      <v-icon start size="small">fas fa-calendar</v-icon>
+                      9+ Years Of Experience
                     </v-chip>
-                    <v-chip class="ma-1" color="green" outlined small>
-                      <v-icon left small>fas fa-map-marker-alt</v-icon>
+                    <v-chip class="ma-1 profile-chip" size="small">
+                      <v-icon start size="small">fas fa-map-marker-alt</v-icon>
                       Tokyo, Japan
                     </v-chip>
-                    <v-chip class="ma-1" color="green" outlined small>
-                      <v-icon left small>fas fa-code</v-icon>
-                      Vue.js Expert
+                    <v-chip class="ma-1 profile-chip" size="small">
+                      <v-icon start size="small">fas fa-code</v-icon>
+                      Frontend Engineer
                     </v-chip>
                   </div>
                 </div>
@@ -51,48 +51,64 @@
         <v-card class="resume-card elevation-4" rounded="lg">
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-graduation-cap</v-icon>
-            <h2 class="headline font-weight-bold">{{ t('resume.education', 'Education') }}</h2>
+            <h2 class="text-h5 font-weight-bold">{{ t('resume.education', 'Education') }}</h2>
           </v-card-title>
-          <v-card-text class="py-0">
-            <v-timeline align-top dense>
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">2012 -</div>
-                    <div class="caption font-weight-bold green--text">2017</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Bachelor In Computer Engineering</strong>
-                    <div class="caption mb-2">National College of Engineering, Lalitpur Nepal</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
+          <v-card-text class="pt-2 pb-4 px-4">
+            <div class="rt-timeline">
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">2012 – 2017</span>
+                  </div>
+                  <div class="rt-title">Bachelor in Computer Engineering</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-university</v-icon>
+                    National College of Engineering
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Lalitpur, Nepal
+                  </div>
+                </div>
+              </div>
 
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">2009 -</div>
-                    <div class="caption font-weight-bold green--text">2011</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>High School</strong>
-                    <div class="caption mb-2">Siddhasthali English High Secondary School, Sindhuli Nepal</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">2009 – 2011</span>
+                  </div>
+                  <div class="rt-title">High School</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-school</v-icon>
+                    Siddhasthali English High Secondary School
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Sindhuli, Nepal
+                  </div>
+                </div>
+              </div>
 
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">Upto 2009</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Secondary School Level</strong>
-                    <div class="caption mb-2">Gaumati Model Higher Secondary School, Sindhuli Nepal</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
-            </v-timeline>
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">Up to 2009</span>
+                  </div>
+                  <div class="rt-title">Secondary School Level</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-school</v-icon>
+                    Gaumati Model Higher Secondary School
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Sindhuli, Nepal
+                  </div>
+                </div>
+              </div>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -102,62 +118,101 @@
         <v-card class="resume-card elevation-4" rounded="lg">
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-briefcase</v-icon>
-            <h2 class="headline font-weight-bold">{{ t('resume.experience', 'Experience') }}</h2>
+            <h2 class="text-h5 font-weight-bold">{{ t('resume.experience', 'Experience') }}</h2>
           </v-card-title>
-          <v-card-text class="py-0">
-            <v-timeline align-top dense>
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">JAN 2020 -</div>
-                    <div class="caption font-weight-bold green--text">MAR 2025</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Frontend Developer/ Software Engineer</strong>
-                    <div class="caption mb-2">Imac Engineering Co. Ltd. (Dispatched to OEC Co. Ltd.)</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
-              
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">JULY 2018 -</div>
-                    <div class="caption font-weight-bold green--text">DEC 2019</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Software Engineer/ Web Developer</strong>
-                    <div class="caption mb-2">Sofwena Pvt. Ltd.</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
-              
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">APR 2017 -</div>
-                    <div class="caption font-weight-bold green--text">MAY 2018</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Data Interpretator</strong>
-                    <div class="caption mb-2">Sprout Technology</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
+          <v-card-text class="pt-2 pb-4 px-4">
+            <div class="rt-timeline">
+              <div class="rt-item">
+                <div class="rt-dot rt-dot--active"></div>
+                <div class="rt-card rt-card--active">
+                  <div class="rt-date-row">
+                    <span class="rt-date">Mar 2025 – Present</span>
+                    <span class="rt-badge">Current</span>
+                  </div>
+                  <div class="rt-title">Application Engineer</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-building</v-icon>
+                    The Japan Research Institute, Limited
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Tokyo, Japan · via Allegis Group
+                  </div>
+                </div>
+              </div>
 
-              <v-timeline-item color="green" small>
-                <v-layout pt-3>
-                  <v-flex xs4>
-                    <div class="caption font-weight-bold green--text">MAY 2016 -</div>
-                    <div class="caption font-weight-bold green--text">AUG 2016</div>
-                  </v-flex>
-                  <v-flex class="pl-2">
-                    <strong>Android Developer (Trainee)</strong>
-                    <div class="caption mb-2">Nepdroid Academy</div>
-                  </v-flex>
-                </v-layout>
-              </v-timeline-item>
-            </v-timeline>
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">Jan 2020 – Mar 2025</span>
+                  </div>
+                  <div class="rt-title">Frontend Developer / Software Engineer</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-building</v-icon>
+                    Imac Engineering Co. Ltd.
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Oita, Japan · Dispatched to OEC Co. Ltd.
+                  </div>
+                </div>
+              </div>
+
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">Jul 2018 – Dec 2019</span>
+                  </div>
+                  <div class="rt-title">Software Engineer / Web Developer</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-building</v-icon>
+                    Sofwena Pvt. Ltd.
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Kathmandu, Nepal
+                  </div>
+                </div>
+              </div>
+
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">Apr 2017 – May 2018</span>
+                  </div>
+                  <div class="rt-title">Data Interpretator</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-building</v-icon>
+                    Sprout Technology
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Kathmandu, Nepal
+                  </div>
+                </div>
+              </div>
+
+              <div class="rt-item">
+                <div class="rt-dot"></div>
+                <div class="rt-card">
+                  <div class="rt-date-row">
+                    <span class="rt-date">May 2016 – Aug 2016</span>
+                  </div>
+                  <div class="rt-title">Android Developer (Trainee)</div>
+                  <div class="rt-org">
+                    <v-icon size="11" class="mr-1">fas fa-building</v-icon>
+                    Nepdroid Academy
+                  </div>
+                  <div class="rt-location">
+                    <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
+                    Kathmandu, Nepal
+                  </div>
+                </div>
+              </div>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -167,9 +222,9 @@
         <v-card class="resume-card elevation-4" rounded="lg">
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-code</v-icon>
-            <h2 class="headline font-weight-bold">
+            <h2 class="text-h5 font-weight-bold">
               <span>{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[0] || 'Technical' }}</span>
-              <span class="green--text">{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[1] || 'Skills' }}</span>
+              <span class="text-green">{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[1] || 'Skills' }}</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
@@ -262,9 +317,9 @@
         <v-card class="resume-card elevation-4" rounded="lg">
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-language</v-icon>
-            <h2 class="headline font-weight-bold">
+            <h2 class="text-h5 font-weight-bold">
               <span>{{ t('resume.languageSkills', 'Language Skills').split(' ')[0] || 'Language' }}</span>
-              <span class="green--text">{{ t('resume.languageCertifications', 'Certifications') }}</span>
+              <span class="text-green">{{ t('resume.languageCertifications', 'Certifications') }}</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
@@ -341,12 +396,11 @@
         <v-btn
           href="Resume.pdf"
           color="green"
-          dark
-          large
+          size="large"
           rounded
           class="download-btn"
         >
-          <v-icon left>fas fa-file-download</v-icon>
+          <v-icon start>fas fa-file-download</v-icon>
           {{ t('resume.downloadResume', 'Download Resume') }}
         </v-btn>
       </v-col>
@@ -359,35 +413,6 @@ import translationMixin from '../mixins/translationMixin'
 
 export default {
   mixins: [translationMixin],
-  metaInfo() {
-    return {
-      title: this.t('resume.title', 'Resume'),
-      titleTemplate: "%s ← Himal's Space",
-    meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'description',
-        content:
-          'Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End'
-      },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: "Himal' Space" },
-      { property: 'og:site_name', content: "Himal' Space" },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://Himal.space' },
-      {
-        property: 'og:image',
-        content: 'https://i.imgur.com/Dcz2PGx.jpg'
-      },
-      {
-        property: 'og:description',
-        content:
-          'Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End'
-      }
-    ]
-    }
-  },
-
   data () {
     return {
       frontendSkills: [
@@ -442,11 +467,186 @@ export default {
   padding: 2rem 1rem;
 }
 
+/* ── Resume Timeline ───────────────────────── */
+.rt-timeline {
+  position: relative;
+  padding: 8px 0 4px 0;
+}
+
+.rt-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(180deg, #4CAF50 0%, #a5d6a7 100%);
+  border-radius: 2px;
+}
+
+.rt-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.rt-item:last-child {
+  margin-bottom: 0;
+}
+
+.rt-dot {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #4CAF50;
+  margin-top: 14px;
+  margin-right: 14px;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+  transition: all 0.25s ease;
+}
+
+.rt-dot--active {
+  background: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(76,175,80,0.2); }
+  50%       { box-shadow: 0 0 0 7px rgba(76,175,80,0.08); }
+}
+
+.rt-card {
+  flex: 1;
+  background: #f9fafb;
+  border: 1px solid #e8eaed;
+  border-left: 3px solid #4CAF50;
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: all 0.22s ease;
+}
+
+.rt-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.12);
+  border-color: #a5d6a7;
+}
+
+.rt-card--active {
+  background: linear-gradient(135deg, #f1f8e9 0%, #f9fafb 100%);
+  border-left-color: #43a047;
+}
+
+.rt-date-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.rt-date {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4CAF50;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.rt-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  background: #4CAF50;
+  color: #fff;
+  padding: 1px 7px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rt-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  color: #1a1a2e;
+}
+
+.rt-org {
+  font-size: 0.78rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.rt-location {
+  font-size: 0.72rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark mode */
+.v-theme--dark .rt-card {
+  background: #1e1e2e;
+  border-color: #2d2d3d;
+  border-left-color: #4CAF50;
+}
+
+.v-theme--dark .rt-card--active {
+  background: linear-gradient(135deg, #1a2a1a 0%, #1e1e2e 100%);
+}
+
+.v-theme--dark .rt-card:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 4px 16px rgba(76,175,80,0.15);
+}
+
+.v-theme--dark .rt-dot {
+  background: #1e1e2e;
+}
+
+.v-theme--dark .rt-dot--active {
+  background: #4CAF50;
+}
+
+.v-theme--dark .rt-title   { color: #e8eaed; }
+.v-theme--dark .rt-org     { color: #9aa0ac; }
+.v-theme--dark .rt-location{ color: #666; }
+
+.v-theme--dark .rt-timeline::before {
+  background: linear-gradient(180deg, #4CAF50 0%, #2d4a2d 100%);
+}
+
 .profile-card {
   background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   color: white;
   position: relative;
   overflow: hidden;
+}
+
+.profile-name-accent {
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+.profile-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.profile-chip {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(4px);
 }
 
 .profile-card::before {
@@ -489,7 +689,7 @@ export default {
   font-weight: 500;
 }
 
-.theme--dark .profile-card {
+.v-theme--dark .profile-card {
   background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
 }
 
@@ -506,7 +706,7 @@ export default {
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-.theme--dark .resume-card {
+.v-theme--dark .resume-card {
   background: rgba(66, 66, 66, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -653,7 +853,7 @@ export default {
   margin-bottom: 0.5rem;
 }
 
-.theme--dark .skill-category-title {
+.v-theme--dark .skill-category-title {
   color: #ccc;
   border-bottom-color: #555;
 }
@@ -938,12 +1138,12 @@ export default {
   100% { transform: translateX(100%); }
 }
 
-.theme--dark .achievement-card {
+.v-theme--dark .achievement-card {
   background: linear-gradient(135deg, #424242 0%, #303030 100%);
   border-color: rgba(255,255,255,0.1);
 }
 
-.theme--dark .badge-name {
+.v-theme--dark .badge-name {
   color: #ecf0f1;
 }
 
@@ -1228,12 +1428,12 @@ export default {
   letter-spacing: 0.5px;
 }
 
-.theme--dark .certificate-card {
+.v-theme--dark .certificate-card {
   background: linear-gradient(145deg, #424242 0%, #303030 50%, #424242 100%);
   border-color: rgba(255,255,255,0.1);
 }
 
-.theme--dark .cert-title {
+.v-theme--dark .cert-title {
   color: #ecf0f1;
 }
 
@@ -1344,20 +1544,20 @@ export default {
   border-radius: 12px;
 }
 
-.theme--dark .cert-card {
+.v-theme--dark .cert-card {
   background: linear-gradient(135deg, #424242 0%, #303030 100%);
   border-left-color: #4CAF50;
 }
 
-.theme--dark .jlpt-card {
+.v-theme--dark .jlpt-card {
   border-left-color: #FF9800;
 }
 
-.theme--dark .cert-name {
+.v-theme--dark .cert-name {
   color: #ecf0f1;
 }
 
-.theme--dark .cert-desc {
+.v-theme--dark .cert-desc {
   color: #bdc3c7;
 }
 
@@ -1622,11 +1822,11 @@ export default {
   background: rgba(255, 152, 0, 0.1);
 }
 
-.theme--dark .achievement-showcase {
+.v-theme--dark .achievement-showcase {
   background: linear-gradient(135deg, #424242 0%, #303030 100%);
 }
 
-.theme--dark .cert-title {
+.v-theme--dark .cert-title {
   color: #ecf0f1;
 }
 
@@ -1728,20 +1928,20 @@ export default {
   color: white;
 }
 
-.theme--dark .cert-item {
+.v-theme--dark .cert-item {
   background: #424242;
   border-left-color: #4CAF50;
 }
 
-.theme--dark .jlpt {
+.v-theme--dark .jlpt {
   border-left-color: #FF9800;
 }
 
-.theme--dark .cert-details h3 {
+.v-theme--dark .cert-details h3 {
   color: #ecf0f1;
 }
 
-.theme--dark .cert-details p {
+.v-theme--dark .cert-details p {
   color: #bdc3c7;
 }
 
@@ -1768,12 +1968,12 @@ export default {
   font-weight: 700;
 }
 
-.theme--dark .cert {
+.v-theme--dark .cert {
   background: #424242;
   color: #ecf0f1;
 }
 
-.theme--dark .cert strong {
+.v-theme--dark .cert strong {
   color: #fff;
 }
 
@@ -1813,11 +2013,11 @@ export default {
   font-weight: 500;
 }
 
-.theme--dark .cert-item {
+.v-theme--dark .cert-item {
   background: rgba(76, 175, 80, 0.15);
 }
 
-.theme--dark .cert-year {
+.v-theme--dark .cert-year {
   color: #ccc;
   background: rgba(76, 175, 80, 0.3);
 }

@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import i18n from './plugins/i18n'
@@ -8,9 +8,4 @@ import 'aos/dist/aos.css'
 
 AOS.init({ once: true, duration: 600 })
 
-new Vue({
-  vuetify,
-  i18n,
-  router,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App).use(vuetify).use(i18n).use(router).mount('#app')

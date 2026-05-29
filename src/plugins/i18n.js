@@ -1,7 +1,4 @@
-import Vue from 'vue'
-import VueI18n from 'vue-i18n'
-
-Vue.use(VueI18n)
+import { createI18n } from 'vue-i18n'
 
 const messages = {
   en: {
@@ -45,9 +42,9 @@ const messages = {
       frontendTechnologies: 'Frontend Technologies',
       mobileTesting: 'Mobile & Testing',
       aiDevTools: 'AI & Dev Tools',
-      yearsExperience: '8+ Years Of Experience',
+      yearsExperience: '9+ Years Of Experience',
       location: 'Tokyo, Japan',
-      expert: 'Vue.js Expert',
+      expert: 'Frontend Engineer',
       bachelor: 'Bachelor In Computer Engineering',
       highSchool: 'High School',
       secondarySchool: 'Secondary School Level',
@@ -122,7 +119,7 @@ const messages = {
       frontendTechnologies: 'フロントエンド技術',
       mobileTesting: 'モバイル・テスト',
       aiDevTools: 'AI・開発ツール',
-      yearsExperience: '8年以上の経験',
+      yearsExperience: '9年以上の経験',
       location: '東京、日本',
       expert: 'Vue.js エキスパート',
       bachelor: 'コンピュータ工学学士',
@@ -160,7 +157,8 @@ const messages = {
   }
 }
 
-const i18n = new VueI18n({
+const i18n = createI18n({
+  legacy: true,
   locale: 'en',
   fallbackLocale: 'en',
   messages

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-container align-center>
+      <v-container>
         <TheHeader :goDark="goDark" @changeTheme="updateTheme($event)"/>
 
         <transition
@@ -24,24 +24,6 @@ import TheFooter from './components/TheFooter.vue'
 
 export default {
   name: 'App',
-  metaInfo: {
-    title: 'Home',
-    titleTemplate: "%s ← Himal's Space",
-    meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Himal Gurung's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: "Himal' Space" },
-      { property: 'og:site_name', content: "Himal' Space" },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://Himal.space' },
-      // {
-      //   property: "og:image",
-      //   content: "https://i.imgur.com/Dcz2PGx.jpg"
-      // },
-      { property: 'og:description', content: "Himal Gurung's Portfolio" }
-    ]
-  },
   components: {
     TheHeader,
     TheFooter
@@ -51,7 +33,7 @@ export default {
   },
   watch: {
     goDark (newVal) {
-      this.$vuetify.theme.dark = newVal
+      this.$vuetify.theme.global.name = newVal ? 'dark' : 'light'
     }
   },
   methods: {
