@@ -395,7 +395,7 @@
       </v-col>
 
       <!-- Download Section -->
-      <v-col cols="12" class="text-center pa-3">
+      <!-- <v-col cols="12" class="text-center pa-3">
         <v-btn
           href="Resume.pdf"
           color="green"
@@ -406,7 +406,7 @@
           <v-icon start>fas fa-file-download</v-icon>
           {{ t('resume.downloadResume', 'Download Resume') }}
         </v-btn>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
