@@ -150,11 +150,11 @@
                   <div class="rt-title">Frontend Developer / Software Engineer</div>
                   <div class="rt-org">
                     <v-icon size="11" class="mr-1">fas fa-building</v-icon>
-                    Imac Engineering Co. Ltd.
+                    OEC Co. Ltd.
                   </div>
                   <div class="rt-location">
                     <v-icon size="10" class="mr-1">fas fa-map-marker-alt</v-icon>
-                    Oita, Japan · Dispatched to OEC Co. Ltd.
+                    Oita, Japan · via Imac Engineering Co. Ltd.
                   </div>
                 </div>
               </div>
@@ -223,8 +223,8 @@
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-code</v-icon>
             <h2 class="text-h5 font-weight-bold">
-              <span>{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[0] || 'Technical' }}</span>
-              <span class="text-green">{{ t('resume.technicalSkills', 'Technical Skills').split(' ')[1] || 'Skills' }}</span>
+              <span>Technical </span>
+              <span class="text-green">Skills</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
@@ -241,7 +241,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -268,7 +269,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -295,7 +297,8 @@
                   :class="['skill-card', `skill-${skill.level.toLowerCase()}`]"
                 >
                   <div class="skill-icon">
-                    <v-icon size="24" color="white">{{ skill.icon }}</v-icon>
+                    <img v-if="skill.img" :src="skill.img" :alt="skill.name" class="skill-img" />
+                    <v-icon v-else size="24" color="white">{{ skill.icon }}</v-icon>
                   </div>
                   <div class="skill-content">
                     <div class="skill-name">{{ skill.name }}</div>
@@ -318,8 +321,8 @@
           <v-card-title class="pb-2">
             <v-icon color="green" class="mr-3" size="28">fas fa-language</v-icon>
             <h2 class="text-h5 font-weight-bold">
-              <span>{{ t('resume.languageSkills', 'Language Skills').split(' ')[0] || 'Language' }}</span>
-              <span class="text-green">{{ t('resume.languageCertifications', 'Certifications') }}</span>
+              <span>Language & </span>
+              <span class="text-green">Certifications</span>
             </h2>
           </v-card-title>
           <v-card-text class="px-6 pb-6">
@@ -392,7 +395,7 @@
       </v-col>
 
       <!-- Download Section -->
-      <v-col cols="12" class="text-center pa-3">
+      <!-- <v-col cols="12" class="text-center pa-3">
         <v-btn
           href="Resume.pdf"
           color="green"
@@ -403,7 +406,7 @@
           <v-icon start>fas fa-file-download</v-icon>
           {{ t('resume.downloadResume', 'Download Resume') }}
         </v-btn>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
@@ -420,7 +423,8 @@ export default {
         { name: 'JavaScript', icon: 'fab fa-js-square', level: 'Expert', percentage: 85 },
         { name: 'Vue.js', icon: 'fab fa-vuejs', level: 'Expert', percentage: 85 },
         { name: 'Nuxt.js', icon: 'fas fa-layer-group', level: 'Expert', percentage: 90 },
-        { name: 'Angular.js', icon: 'fab fa-angular', level: 'Advanced', percentage: 75 }
+        { name: 'Angular.js', icon: 'fab fa-angular', level: 'Advanced', percentage: 75 },
+        { name: 'Express.js', img: '/images/express-kawaii.webp', level: 'Intermediate', percentage: 60 }
       ],
       mobileTestingSkills: [
         { name: 'Android Programming', icon: 'fab fa-android', level: 'Intermediate', percentage: 55 },
@@ -431,7 +435,8 @@ export default {
         { name: 'ChatGPT', icon: 'fas fa-comments', level: 'Expert', percentage: 90 },
         { name: 'GitHub Copilot', icon: 'fab fa-github', level: 'Expert', percentage: 85 },
         { name: 'Amazon Q', icon: 'fab fa-aws', level: 'Advanced', percentage: 80 },
-        { name: 'AWS', icon: 'fab fa-aws', level: 'Advanced', percentage: 75 }
+        { name: 'AWS', icon: 'fab fa-aws', level: 'Advanced', percentage: 75 },
+        { name: 'Project Management', icon: 'fas fa-tasks', level: 'Advanced', percentage: 75 }
       ],
       languageSkills: [
         { name: 'English', flag: '🇺🇸', level: 'Fluent', percentage: 90 },
@@ -784,6 +789,13 @@ export default {
 
 .skill-icon .v-icon {
   font-size: 14px !important;
+}
+
+.skill-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .language-flag .flag-emoji {

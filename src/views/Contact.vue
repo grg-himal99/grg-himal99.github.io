@@ -4,9 +4,9 @@
       <v-col cols="12" md="8" lg="6">
         <v-card class="contact-card elevation-8" rounded="lg">
           <v-card-title class="justify-center pb-6">
-            <h1 class="display-1 font-weight-light">
-              <span>{{ t('contact.getInTouch', 'Get In Touch').split(' ')[0] }} {{ t('contact.getInTouch', 'Get In Touch').split(' ')[1] }}</span>
-              <span class="green--text font-weight-bold">{{ t('contact.getInTouch', 'Get In Touch').split(' ')[2] }}</span>
+            <h1 class="text-h4 font-weight-light">
+              <span>Get In </span>
+              <span class="text-green font-weight-bold">Touch</span>
             </h1>
           </v-card-title>
           
@@ -18,8 +18,8 @@
                     <v-icon color="white" size="28">fas fa-map-marker-alt</v-icon>
                   </v-avatar>
                   <div class="contact-info">
-                    <div class="subtitle-1 font-weight-bold">{{ t('resume.location', 'Tokyo, Japan').split(',')[0] }}</div>
-                    <div class="body-1">{{ t('footer.location', 'Tokyo, Japan') }}</div>
+                    <div class="text-subtitle-1 font-weight-bold">{{ t('resume.location', 'Tokyo, Japan').split(',')[0] }}</div>
+                    <div class="text-body-1">{{ t('footer.location', 'Tokyo, Japan') }}</div>
                   </div>
                 </div>
               </v-col>
@@ -30,8 +30,8 @@
                     <v-icon color="white" size="28">fas fa-envelope</v-icon>
                   </v-avatar>
                   <div class="contact-info">
-                    <div class="subtitle-1 font-weight-bold">{{ t('contact.email', 'Email') }}</div>
-                    <div class="body-1">himalgurung45[at] <span class="green--text">gmail.com</span></div>
+                    <div class="text-subtitle-1 font-weight-bold">{{ t('contact.email', 'Email') }}</div>
+                    <div class="text-body-1">himalgurung45[at]<span class="text-green">gmail.com</span></div>
                   </div>
                 </div>
               </v-col>
@@ -42,8 +42,8 @@
                     <v-icon color="white" size="28">fas fa-phone</v-icon>
                   </v-avatar>
                   <div class="contact-info">
-                    <div class="subtitle-1 font-weight-bold">Phone</div>
-                    <div class="body-1">070-<span class="green--text">xxxx-xxxx</span></div>
+                    <div class="text-subtitle-1 font-weight-bold">Phone</div>
+                    <div class="text-body-1">070-<span class="green--text">xxxx-xxxx</span></div>
                   </div>
                 </div>
               </v-col>
@@ -52,7 +52,7 @@
             <v-divider class="my-6"></v-divider>
             
             <div class="text-center">
-              <h3 class="subtitle-1 font-weight-bold mb-4">Connect With Me</h3>
+              <h3 class="text-subtitle-1 font-weight-bold mb-4">Connect With Me</h3>
               <div class="social-links">
                 <v-btn
                   v-for="social in socialLinks"
@@ -60,7 +60,7 @@
                   :href="social.url"
                   target="_blank"
                   icon
-                  large
+                  size="large"
                   class="mx-2 social-btn"
                   :color="social.color"
                 >

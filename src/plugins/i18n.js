@@ -121,7 +121,7 @@ const messages = {
       aiDevTools: 'AI・開発ツール',
       yearsExperience: '9年以上の経験',
       location: '東京、日本',
-      expert: 'Vue.js エキスパート',
+      expert: 'フロントエンドエンジニア',
       bachelor: 'コンピュータ工学学士',
       highSchool: '高等学校',
       secondarySchool: '中等教育レベル',
