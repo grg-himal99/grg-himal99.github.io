@@ -2,7 +2,7 @@
   <footer class="site-footer">
     <div class="footer-wave">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="#0d1117"/>
+        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="currentColor"/>
       </svg>
     </div>
 
@@ -96,6 +96,11 @@ export default {
   display: block;
   line-height: 0;
   margin-bottom: -1px;
+  color: #0d1117; /* light mode: dark wave on white page */
+}
+
+.v-theme--dark .footer-wave {
+  color: #1a1a2e;
 }
 
 .footer-wave svg {
@@ -108,6 +113,10 @@ export default {
   background: #0d1117;
   padding: 2.5rem 2rem 1.5rem;
   position: relative;
+}
+
+.v-theme--dark .footer-body {
+  background: #1a1a2e;
 }
 
 .footer-body::before {
